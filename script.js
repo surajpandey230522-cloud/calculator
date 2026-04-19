@@ -26,68 +26,90 @@ let flag_multiply=false
 let flag_divide=false
 let fir;
 let sec;
+let equal_flag=false
+const clr_screen=()=>{
+    if(equal_flag===true){
+        screen.textContent=''
+        equal_flag=false;
+    } 
+}
 
 add.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "+"
     flag_plus=true
 })
 subs.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "-"
     flag_minus=true
 })
 mul.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "X"
     flag_multiply=true
 })
 divide.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "/"
     flag_divide=true
 })
 one.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "1"
 })
 two.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "2"
 })
 three.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "3"
 })
 four.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "4"
 })
 five.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "5"
 })
 six.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "6"
 })
 seven.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "7"
 })
 eight.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "8"
 })
 nine.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "9"
 })
 zero.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "0"
 })
 dblzero.addEventListener("click",()=>{
+    clr_screen()
     let suraj=screen.textContent
     screen.textContent=suraj + "00"
 })
@@ -123,4 +145,13 @@ equal.addEventListener('click',()=>{
         screen.textContent=Number(fir)/Number(sec)
         flag_divide=false
     }
+    equal_flag=true
+})
+percent.addEventListener('click',()=>{
+    clr_screen()
+    screen.textContent=Number(screen.textContent)/100
+    equal_flag=true
+})
+dot.addEventListener('click',()=>{
+    screen.textContent=screen.textContent+"."
 })
