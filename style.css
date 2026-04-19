@@ -26,6 +26,7 @@ h1{
     font-weight: 700;
 }
 #keypad{
+    background-color:aquamarine;
     width: 385px;
     height: 410px;
     margin: 5px;
